@@ -1,0 +1,28 @@
+{
+    "presets": ["react-app", "@babel/preset-env", "@babel/preset-react"],
+    "plugins": [
+        ["macros"],
+        [
+            "module-resolver",
+            {
+                "root": ["./src"],
+                "alias": {
+                    "@hooks": "./src/hooks",
+                    "@components": "./src/components",
+                    "@pages": "./src/pages",
+                    "@helpers": "./src/helpers",
+                    "@context": "./src/context",
+                    "@assets": "./src/assets",
+                    "@hoc": "./src/hoc",
+                    "@common": "./src/common",
+                    "@dataview": "./src/components/Dataview",
+                    "@api": "./src/api",
+                    "@dashboards": "./src/components/Dashboards"
+                }
+            }
+        ],
+        ["styled-components"]
+    ],
+    "sourceMaps": true,
+    "inputSourceMap": true,
+}

@@ -1,5 +1,5 @@
 {
-  "name": "react-component-library",
+  "name": "rcl-test",
   "version": "1.0.0",
   "main": "build/index.js",
   "module": "build/index.esm.js",
@@ -9,7 +9,7 @@
   "types": "build/index.d.ts",
   "description": "A skeleton to create your own React component library using Rollup, TypeScript, Sass and Storybook",
   "scripts": {
-    "build": "rollup -c",
+    "build": "NODE_ENV=production rollup -c -w",
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
@@ -37,8 +37,8 @@
   },
   "homepage": "https://github.com/HarveyD/react-component-library#readme",
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": ">=16.13.1",
+    "react-dom": ">=16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
@@ -64,8 +64,13 @@
     "rollup-plugin-postcss": "^3.1.2",
     "rollup-plugin-typescript2": "^0.27.0",
     "sass-loader": "^8.0.0",
+    "styled-components": "^5.1.1",
     "ts-jest": "^24.2.0",
-    "typescript": "^3.7.2",
-    "styled-components": "^5.1.1"
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-styled-components": "^1.10.5",
+    "rollup-plugin-babel": "^4.4.0"
   }
 }
